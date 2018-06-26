@@ -1,0 +1,72 @@
+@import 'varible';
+@import 'normalize';
+@import 'base';
+
+.bread-crumbs {
+    width: 100%;
+    height: 75rem/@base;
+    border-bottom: 1px solid #ccc;
+    line-height: 75rem/@base;
+    padding: 0 20rem/@base;
+    font-size: 22rem/@base;
+    background-image: linear-gradient( white, rgba(0,0,0,.3));
+
+    button {
+        width: 122rem/@base;
+        height: 58rem/@base;
+        line-height: 58rem/@base;
+        vertical-align: middle;
+        border-radius: 15rem/@base;
+        background-color: #ccc;
+    }
+}
+
+.product-list {
+   
+    li {
+        width: 100%;
+        height: 235rem/@base;
+        border: 1px solid #ccc;
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 30rem/@base; 
+        }
+
+        .img {
+            float: left;
+            width: 200rem/@base;
+            margin-right: 20rem/@base;
+        }
+    
+        .info {
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+    
+            .title {
+                position: absolute;
+                top: 0;
+                font-size: 28rem/@base;
+            }
+    
+            .price {
+                color: #ff6c00;
+                font-size: 26rem/@base;
+                position: absolute;
+                top: 100rem/@base;
+            }
+    
+            .comment {
+                width: 210rem/@base;
+                color: #bbbbbb;
+                font-size: 22rem/@base;
+                line-height: 1;
+                position: absolute;
+                top: 150rem/@base;
+            }
+        }
+    }
+}

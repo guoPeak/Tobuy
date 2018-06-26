@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>慢慢买-分类页</title>
+	<link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/category.css">
+
+	<script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+	<!-- 头部标题logo区域 -->
+	<header class="mmb-header clearfix">
+		<a class="fl">
+			<img src="images/header_logo.png" alt="">
+		</a>
+		<a class="fr">
+			<img src="images/header_app.png" alt="">
+		</a>
+	</header>
+
+	<!-- 搜索区 -->
+	<section class="mmb-search">
+		<input type="search">
+		<button>搜索</button>
+	</section>
+
+	<!-- 分类区域 -->
+	<section class="category">
+		<ul>
+			<!-- 挖个坑 -->
+		</ul>
+	</section>
+
+	<!-- 底部 -->
+	<footer class="mmb-footer">
+		<div class="login">
+			<div>登录</div>
+			<div>注册</div>
+			<div class="to-top">
+				<img src="images/top.jpg">回到顶部
+			</div>
+		</div>
+
+		<div class="app">
+			<a href="javascript:;">手机APP下载</a>
+			<a href="javascript:;">慢慢买手机版</a>
+			<a href="javascript:;">--掌上比价平台</a>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</footer>
+
+	<script type="text/html" id="tpl1">
+		{{each result v i}}
+		<li>
+			<div class="title" data-id="{{v.titleId}}">
+				<h3 class="fl">{{v.title}}</h3>
+				<i class="fa fa-angle-down fr"></i>
+			</div>
+			<ul class="content clearfix">
+				<!-- 挖个渲染的坑 -->
+			</ul>
+		</li>
+		{{/each}}
+	</script>
+
+	<!-- 分类页下来菜单 -->
+	<script type="text/html" id="tpl2">
+		{{each result v i}}
+		<li><a href="#">{{v.category}}</a></li>
+		{{/each}}
+	</script>
+
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/artTemplate/template-web.js"></script>
+	<script src="js/common/Route.js"></script>
+	<script src="js/common/common.js"></script>
+	<script src="js/category.js"></script>
+</body>
+
+</html>

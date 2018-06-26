@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>慢慢买-首页</title>
+	<link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/index.css">
+
+	<script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+	<!-- 头部标题logo区域 -->
+	<header class="mmb-header clearfix">
+		<a class="fl">
+			<img src="images/header_logo.png" alt="">
+		</a>
+		<a class="fr">
+			<img src="images/header_app.png" alt="">
+		</a>
+	</header>
+
+	<!-- 搜索区 -->
+	<section class="mmb-search">
+		<input type="search">
+		<button>搜索</button>
+	</section>
+
+	<!-- 导航区 -->
+	<nav class="mmb-nav">
+		<ul class="clearfix">
+
+			<!-- 模板加载区 -->
+
+		</ul>
+	</nav>
+
+	<!-- 推荐商品列表 -->
+	<section class="recommend-item">
+		<header class="clearfix">
+			<h3 class="fl">超值折扣推荐</h3>
+			<img src="images/more.png" alt="" class="fr">
+		</header>
+		<div class="content">
+			<ul>
+				<!-- 数据生成 -->
+			</ul>
+		</div>
+	</section>
+
+	<div class="mmb-more">
+		<a href="javascript:;">更多优惠信息>></a>
+	</div>
+
+	<div class="mmb-dv">
+		<h3 class="fl">品牌排行</h3>
+		<img src="images/more.png" alt="" class="fr">
+	</div>
+
+	<!-- 底部 -->
+	<footer class="mmb-footer">
+		<div class="login">
+			<div>登录</div>
+			<div>注册</div>
+			<div class="to-top">
+				<img src="images/top.jpg">回到顶部
+			</div>
+		</div>
+
+		<div class="app">
+			<a href="javascript:;">手机APP下载</a>
+			<a href="javascript:;">慢慢买手机版</a>
+			<a href="javascript:;">--掌上比价平台</a>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</footer>
+
+	<!-- nav导航区域模板 -->
+	<script type="text/html" id="tpl1">
+		{{each result v i}}
+		<li>
+			<a href="{{v.titlehref}}">
+				<!-- <img src="images/ic_mall.png"> -->
+				{{@ v.img}}
+				<p>{{v.name}}</p>
+			</a>
+		</li>
+		{{/each}}
+	</script>
+
+	<!-- 商品列表的模板 -->
+	<script type="text/html" id="tpl2">
+		{{each result v i}}
+		<li>
+			<a href="javascript:;" data-product-id="{{v.productId}}">
+				<div class="img">
+					{{@ v.productImgSm}}
+				</div>
+				<div class="info">
+					<div class="title txt-cut">{{v.productName}}</div>
+					<div class="price">{{v.productPinkage}}</div>
+					<div class="comment">
+						<span>{{v.productFrom}} | {{v.productTime}}</span>
+						<span class="fr fa fa-commenting-o"> {{v.productComCount}}</span>
+					</div>
+				</div>
+			</a>
+		</li>
+		{{/each}}
+	</script>
+
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/artTemplate/template-web.js"></script>
+	<script src="js/common/Route.js"></script>
+	<script src="js/common/common.js"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>

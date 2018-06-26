@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>慢慢买-首页</title>
+	<link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/productlist.css">
+
+	<script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+	<!-- 头部标题logo区域 -->
+	<header class="mmb-header clearfix">
+		<a class="fl">
+			<img src="images/header_logo.png" alt="">
+		</a>
+		<a class="fr">
+			<img src="images/header_app.png" alt="">
+		</a>
+	</header>
+
+	<!-- 搜索区 -->
+	<section class="mmb-search">
+		<input type="search">
+		<button>搜索</button>
+	</section>
+
+	<!-- 面包屑导航 -->
+	<div class="bread-crumbs">
+		<div class="fl">
+			<a href="index.html">首页</a>
+			<span>></span>
+			<a href="category.html">全部分类</a>
+			<span>></span>
+			<a href="javascript:;">电视</a>
+		</div>
+
+		<div class="fr">
+			<button>筛选</button>
+		</div>
+	</div>
+
+	<!-- 商品列表 -->
+	<section class="product-list">
+		<ul>
+			<li>
+				<a href="javascript:;" data-product-id="{{v.productId}}">
+					<div class="img">
+						<img src="images/pro-list-2rol-img.jpg" alt="">
+					</div>
+					<div class="info">
+						<div class="title txt-cut">商品列表商品商品商品商品列表商品列表商品列表商品列表商品列表商品列表商品列表</div>
+						<div class="price">&yen;1999.00</div>
+						<div class="comment">
+							<span class="fl">报价(6)</span>
+							<span class="fr">评论(2210)</span>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+	<!-- 底部 -->
+	<footer class="mmb-footer">
+		<div class="login">
+			<div>登录</div>
+			<div>注册</div>
+			<div class="to-top">
+				<img src="images/top.jpg">回到顶部
+			</div>
+		</div>
+
+		<div class="app">
+			<a href="javascript:;">手机APP下载</a>
+			<a href="javascript:;">慢慢买手机版</a>
+			<a href="javascript:;">--掌上比价平台</a>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</footer>
+
+
+
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/artTemplate/template-web.js"></script>
+	<script src="js/common/Route.js"></script>
+	<script src="js/common/common.js"></script>
+	<script src="js/productlist.js"></script>
+</body>
+
+</html>
