@@ -333,14 +333,14 @@ i {
   font-size: 0.32rem;
 }
 .mmb-footer {
-  margin-top: 0.26666667rem;
+  padding-top: 0.53333333rem;
   background-color: #f1f1f1;
 }
 .mmb-footer .login {
   width: 100%;
   height: 0.93333333rem;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
   text-align: center;
   line-height: 0.93333333rem;
 }
@@ -351,8 +351,8 @@ i {
   font-size: 0.29333333rem;
 }
 .mmb-footer .login div:nth-child(2) {
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
 }
 .mmb-footer .to-top img {
   display: inline-block;
@@ -388,7 +388,7 @@ i {
 .product-list li {
   width: 100%;
   height: 3.13333333rem;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 .product-list li a {
   display: block;
@@ -399,7 +399,12 @@ i {
 .product-list li .img {
   float: left;
   width: 2.66666667rem;
+  height: 2.66666667rem;
   margin-right: 0.26666667rem;
+}
+.product-list li .img img {
+  width: 100%;
+  height: 100%;
 }
 .product-list li .info {
   overflow: hidden;
@@ -424,4 +429,24 @@ i {
   line-height: 1;
   position: absolute;
   top: 2rem;
+}
+.product-list .paginator {
+  width: 100%;
+  height: 1.26666667rem;
+  padding-top: 0.26666667rem;
+  text-align: center;
+  font-size: 0.24rem;
+}
+.product-list .paginator button {
+  width: 2.17333333rem;
+  height: 0.86666667rem;
+  background-color: #ddd;
+  border-radius: 0.13333333rem;
+}
+.product-list .paginator select {
+  width: 2.05333333rem;
+  height: 0.93333333rem;
+  margin: 0 1.2rem;
+  padding-left: 0.4rem;
+  font-size: 0.29333333rem;
 }

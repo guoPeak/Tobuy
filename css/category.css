@@ -333,14 +333,14 @@ i {
   font-size: 0.32rem;
 }
 .mmb-footer {
-  margin-top: 0.26666667rem;
+  padding-top: 0.53333333rem;
   background-color: #f1f1f1;
 }
 .mmb-footer .login {
   width: 100%;
   height: 0.93333333rem;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
   text-align: center;
   line-height: 0.93333333rem;
 }
@@ -351,8 +351,8 @@ i {
   font-size: 0.29333333rem;
 }
 .mmb-footer .login div:nth-child(2) {
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
 }
 .mmb-footer .to-top img {
   display: inline-block;
