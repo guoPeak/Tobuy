@@ -15,8 +15,11 @@
 <body>
 	<!-- 头部标题logo区域 -->
 	<header class="mmb-header clearfix">
+		<a href="javascript:history.go(-1);"  class="back">
+			<span class="fa fa-angle-left"></span>
+		</a>
 		<h3>省钱控-最新优惠</h3>
-		<a class="fr">
+		<a class="appdown">
 			<img src="images/header_app.png" alt="">
 		</a>
 	</header>
@@ -72,7 +75,7 @@
 	<script type="text/html" id="tpl">
 		{{each result v i}}
 		<li>
-			<a href="#">
+			<a href="discountDetail.html?productId={{v.productId}}">
 				<div class="img">
 					{{@ v.productImgSm}}
 				</div>

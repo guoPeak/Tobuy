@@ -92,19 +92,48 @@ em, i {
 .mmb-header {
   background-color: @bgColor;
   height: 98rem/@base;
+  position: relative;
 
-  .fl {
+  h3 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 98rem/@base;
+    font-size: 40rem/@base;
+    color: #fff;
+  }
+
+  .logo {
       padding: 24rem/@base 20rem/@base;
       height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
 
       img {
           width: 371rem/@base;
       }
   }
 
-  .fr {
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    font-size: 80rem/@base;
+    line-height: 90rem/@base;
+    padding-left: 30rem/@base;
+    color: #fff;
+    
+  }
+
+  .appdown {
       padding: 15rem/@base;
       height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
      
       img {
           width: 68rem/@base;
