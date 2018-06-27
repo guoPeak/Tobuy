@@ -176,7 +176,6 @@ td,
 th {
   padding: 0;
 }
-@charset "utf-8";
 body,
 div,
 ul,
@@ -333,7 +332,6 @@ i {
   font-size: 0.32rem;
 }
 .mmb-footer {
-  padding-top: 0.53333333rem;
   background-color: #f1f1f1;
 }
 .mmb-footer .login {

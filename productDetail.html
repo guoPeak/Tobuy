@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>慢慢买-商品列表</title>
+	<title>慢慢买-比价页</title>
 	<link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/productlist.css">
+	<link rel="stylesheet" href="css/productDetail.css">
 
 	<script src="lib/flexible/flexible.js"></script>
 </head>
@@ -25,7 +25,7 @@
 
 	<!-- 搜索区 -->
 	<section class="mmb-search">
-		<input type="search">
+		<input type="search" placeholder="请输入你想比价的商品">
 		<button>搜索</button>
 	</section>
 
@@ -34,27 +34,43 @@
 		<div class="fl">
 			<a href="index.html">首页</a>
 			<span>></span>
-			<a href="category.html">全部分类</a>
+			<a href="javascript:history.go(-1);">电视</a>
 			<span>></span>
-			<!-- <a href="javascript:;">电视</a> -->
+			<a href="javascript" class="proName"></a>
 		</div>
-
 		<div class="fr">
 			<button>筛选</button>
 		</div>
 	</div>
 
-	<!-- 商品列表 -->
-	<section class="product-list">
-		<ul>
-			<!-- 动态渲染 -->
-		</ul>
-		<div class="paginator">
-			<button class="prev">上一页</button>
-			<select name="" id="currentPage">
-				<!-- js实现 -->
-			</select>
-			<button class="next">下一页</button>
+	<div class="product-detail">
+		<!-- 挖个坑 -->
+	</div>
+
+	<!-- <div class="tobuy">
+		<div class="mall">
+			<div class="name fl">
+				<img src="images/slogo.png" alt=""> 京东商城
+			</div>
+			<div class="price fr">
+				<span>&yen;1999.00</span>
+				<a href="javascript:;">去购买</a>
+			</div>
+		</div>
+		<div class="info">
+			实际价格以各网站为准实际价格以各网站为准实际价格以各网站为准实际价格以各网站为准
+		</div>
+	</div> -->
+
+	<section class="mmb-comments">
+		<header>网友评价</header>
+		<div class="content">
+			<ul>
+				<!-- 数据坑 -->
+			</ul>
+		</div>
+		<div class="more">
+			<a href="javascript:;">查看更多评价</a>
 		</div>
 	</section>
 
@@ -78,29 +94,31 @@
 
 
 	<script type="text/html" id="tpl1">
-		<a href="javascript:;">{{result[0].category}}</a>
+		<div class="title">{{result[0].productName}}</div>
+		<div class="img">{{@ result[0].productImg }}</div>
+		<div class="details">
+			<ul class="clearfix">
+				<li class="now"><a href="javascript:;">比价购买</a></li>
+				<li><a href="javascript:;">产品参数</a></li>
+				<li><a href="javascript:;">评价(2322)</a></li>
+			</ul>
+		</div>
+		{{@ result[0].bjShop }}
 	</script>
 
-	<!-- 商品列表 -->
-	<script type="text/html" id="tpl2">
+	<script type="text/html" id="comments">
 		{{each result v i}}
-			<li>
-				<a href="productDetail.html?productId={{v.productId}}">
-					<div class="img">
-						{{@ v.productImg}}
-					</div>
-					<div class="info">
-						<div class="title txt-cut">{{v.productName}}</div>
-						<div class="price">{{v.productPrice}}</div>
-						<div class="comment">
-							<span class="fl">{{v.productQuote}}</span>
-							<span class="fr">{{v.productCom}}</span>
-						</div>
-					</div>
-				</a>
-			</li>
+		<li>
+			<div class="title clearfix">
+				<div class="fl">{{v.comName}}</div>
+				<div class="fr">{{v.comTime}}</div>
+			</div>
+			<div class="buy-form">{{v.comFrom}}</div>
+			<div class="word">
+				{{v.comContent}}
+			</div>
+		</li>
 		{{/each}}
-
 	</script>
 
 	<script src="lib/jquery/jquery.min.js"></script>
@@ -108,7 +126,7 @@
 	<script src="js/common/Route.js"></script>
 	<script src="js/common/Tools.js"></script>
 	<script src="js/common/common.js"></script>
-	<script src="js/productlist.js"></script>
+	<script src="js/productDetail.js"></script>
 </body>
 
 </html>

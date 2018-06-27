@@ -1,0 +1,100 @@
+@import 'varible';
+@import 'normalize';
+@import 'base';
+
+
+.mmb-header {
+    position: relative;
+
+    h3 {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 98rem/@base;
+        font-size: 40rem/@base;
+        color: #fff;
+    }
+}
+
+.product-list {
+   
+    li {
+        width: 100%;
+        height: 255rem/@base;
+        border-bottom: 1px solid #ccc;
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 30rem/@base; 
+        }
+
+        .img {
+            float: left;
+            width: 200rem/@base;
+            height: 200rem/@base;
+            margin-right: 20rem/@base;
+
+            img {
+                width: 100%;
+                height: 100%;
+                font-size: 20rem/@base;
+            }
+        }
+    
+        .info {
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+    
+            .title {
+                position: absolute;
+                top: 0;
+                font-size: 28rem/@base;
+            }
+    
+            .price {
+                color: #ff6c00;
+                font-size: 26rem/@base;
+                position: absolute;
+                top: 90rem/@base;
+            }
+    
+            .comment {
+                width: 100%;
+                color: #bbbbbb;
+                font-size: 22rem/@base;
+                line-height: 1;
+                position: absolute;
+                top: 150rem/@base;
+            }
+        }
+    }
+
+    .paginator {
+        width: 100%;
+        height: 95rem/@base;
+        padding-top: 20rem/@base;
+        text-align: center;
+        font-size: 18rem/@base;
+        margin-bottom: 30rem/@base;
+
+        button {
+            width: 163rem/@base;
+            height: 65rem/@base;
+            background-color: #ddd;
+            border-radius: 10rem/@base;
+        }
+
+        select {
+            width: 154rem/@base;
+            height: 70rem/@base;
+            margin: 0 90rem/@base;
+            padding-left: 30rem/@base;
+            font-size: 22rem/@base;
+
+        }
+    }
+}
