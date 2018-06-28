@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>慢慢买-商城导航</title>
+	<link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/sitenav.css">
+
+	<script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+	<!-- 头部标题logo区域 -->
+	<header class="mmb-header clearfix">
+		<a href="javascript:history.go(-1);" class="back">
+			<span class="fa fa-angle-left"></span>
+		</a>
+		<h3>商城导航</h3>
+		<a class="appdown">
+			<img src="images/header_app.png" alt="">
+		</a>
+	</header>
+
+	<div class="mall-guide">
+		<ul class="clearfix">
+			<!-- 挖个坑 -->
+		</ul>
+	</div>
+
+	<!-- 底部 -->
+	<footer class="mmb-footer">
+		<div class="login">
+			<div>登录</div>
+			<div>注册</div>
+			<div class="to-top">
+				<a href="#">
+					<img src="images/top.jpg">回到顶部</a>
+			</div>
+		</div>
+
+		<div class="app">
+			<a href="javascript:;">手机APP下载</a>
+			<a href="javascript:;">慢慢买手机版</a>
+			<a href="javascript:;">--掌上比价平台</a>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</footer>
+
+	<script type="text/html" id="tpl">
+		{{each result v i}}
+		<li>
+			<a href="{{v.navHref}}" class="clearfix">
+				<div class="fl img"><img src="{{v.navImg}}" alt=""></div>
+				<div class="fr">{{v.navTitle}}</div>
+			</a>
+		</li>
+		{{/each}}
+	</script>
+
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/artTemplate/template-web.js"></script>
+	<script src="js/common/Route.js"></script>
+	<script src="js/common/Tools.js"></script>
+	<script src="js/sitenav.js"></script>
+</body>
+
+</html>
