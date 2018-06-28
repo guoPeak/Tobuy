@@ -2,6 +2,8 @@ $(function () {
 
     var obj = Tools.query(location.href);
     var imgNum;
+    var $ul = $('.mask ul');
+    var $mask = $('.mask');
 
     var couponId = obj.couponId;
     var couponTitle = decodeURI(obj.couponTitle);//对unidcode解码
@@ -15,12 +17,13 @@ $(function () {
 
 
     //生成轮播图
-    $('.product-list').on('click', '.img', clickImg);
-
+    $('.product-list').on('click', '.img', renderImg);
+    $('.product-list .img').eq(imgNum).on('click', renderImg);
    
 
-    function clickImg() {  
+    function renderImg() {  
         imgNum = $(this).data('couponproduct-id');
+        // console.log(imgNum);
         var currentImg = $(this).children('img').attr('src');
         var prevImg = $(this).parents('li').prev().find('img').attr('src');
         if (!prevImg) {
@@ -37,36 +40,43 @@ $(function () {
         $('.mask .current img').attr('src', currentImg);
         $('.mask .next img').attr('src', nextImg);
 
-        $('.mask').show(500);
+        $mask.show();
 
+        $ul.css('transition', 'all 1s');
     }
 
     //轮播图事件
-    
-    $('.mask .arr-l').on('click', function () {
-        var width = $('.wrapper').width();
-        $('.mask ul').css('left', -width*2);
-    })
-
+    var width;
     $('.mask .arr-r').on('click', function () {
-        $('.mask ul').css('left', 0);
+        width = $('.wrapper').width();
+        $ul.css('left', -width*2);
+        imgNum++;
+        
     })
 
-    $('.mask ul').on('transitionend', function () {  
-        console.log(11);
+    $('.mask .arr-l').on('click', function () {
+        $ul.css('left', 0);
+        imgNum--;
+
+    })
+
+    $ul.on('transitionend', function () {  
         $(this).css('transition', 'none');
-        console.log($(this));
+        $(this).css('left', -width);
+    
+        $('.product-list .img').eq(imgNum).trigger('click');
     })
 
-    $('.mask').on('click', 'ul', function (e) {  
+    // 点击mask周边隐藏mask
+    $mask.on('click', 'ul', function (e) {  
         e.stopPropagation();
     })
 
-    $('.mask').on('click', '.arrow', function (e) {  
+    $mask.on('click', '.arrow', function (e) {  
         e.stopPropagation(); 
     })
 
-    $('.mask').on('click', function () {  
+    $mask.on('click', function () {  
         $(this).hide();
     })
 
