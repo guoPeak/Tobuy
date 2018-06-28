@@ -1,0 +1,224 @@
+@import 'varible';
+@import 'normalize';
+@import 'base';
+
+//面包屑导航样式
+.bread-crumbs {
+    width: 100%;
+    height: 75rem/@base;
+    border-bottom: 1px solid #ccc;
+    line-height: 75rem/@base;
+    padding: 0 20rem/@base;
+    font-size: 22rem/@base;
+    background-image: linear-gradient( white, rgba(0,0,0,.3));
+}
+
+h2 {
+    height: 75rem/@base;
+    line-height: 75rem/@base;
+    padding-left: 20rem/@base;
+    color: #79360e;
+    border-bottom: 1px solid #ccc;
+    font-size: 26rem/@base;
+    font-weight: 700;
+    background-color: #eee;
+}
+
+.brand-list {
+    width: 100%;
+   
+    
+
+    li {
+        width: 100%;
+        height: 130rem/@base;
+        position: relative;
+        padding: 20rem/@base 25rem/@base;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .rank {
+        float: left;
+        width: 40rem/@base;
+        height: 40rem/@base;
+        text-align: center;
+        line-height: 40rem/@base;
+        font-size: 26rem/@base;
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    li:first-child .rank {
+        background-color: #f10e0e;
+    }
+
+    li:nth-child(2) .rank {
+        background-color: #ff9314;
+    }
+
+    li:nth-child(3) .rank {
+        background-color: #8adf5b;
+    }
+
+    .content {
+        overflow: hidden;
+        padding-left: 20rem/@base;
+
+        .title {
+            font-size: 30rem/@base;
+            font-weight: 700;
+            padding-bottom: 8rem/@base;
+        }
+
+        .info {
+            font-size: 22rem/@base;
+            color: #666;
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        right: 20rem/@base;
+        font-size: 70rem/@base;
+        color: #ccc;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}
+
+.product-list {
+    width: 100%;
+
+    li {
+        width: 100%;
+        height: 235rem/@base;
+        border-bottom: 1px solid #ccc;
+        padding: 25rem/@base;
+    }
+
+    .img {
+        float: left;
+        width: 200rem/@base;
+        font-size: 16rem/@base;
+        
+        img {
+            height: 180rem/@base;
+        }
+    }
+
+    .content {
+        padding-left: 25rem/@base;
+        overflow: hidden;
+
+        .title {
+            font-size: 26rem/@base;
+            font-weight: 700;
+            height: 85rem/@base;
+            line-height: 1.5;
+        }
+
+        .price {
+            padding-top: 15rem/@base;
+            font-size: 30rem/@base;
+            color: red;
+
+            span:last-child {
+                color: #ff9314;
+                letter-spacing: 4rem/@base;
+            }
+        }
+
+        .quote {
+            width: 220rem/@base;
+            padding-top: 10rem/@base;
+            color: #666;
+            font-size: 22rem/@base;
+        }
+    }
+}
+
+.brand-comments {
+
+    li {
+        padding: 20rem/@base;   
+        border-bottom: 1px solid #ccc;     
+    }
+
+    .product-info {
+        width: 100%;
+        height: 230rem/@base;
+
+        .img {
+            float: left;
+            width: 220rem/@base;
+            padding: 20rem/@base;
+
+            img {
+                height: 180rem/@base;
+            }
+        }
+
+        .name {
+            font-size: 28rem/@base;
+            line-height: 1.6;
+            color: #666;
+        }
+    }
+
+    .comments {
+        padding: 20rem/@base;
+        border: 1px solid #ccc;
+        position: relative;
+
+        .angle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            top: -30rem/@base;
+            left: 75rem/@base;
+            border: 15rem/@base solid transparent;
+            border-bottom-color: #ccc;
+        }
+
+        .angle::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 14rem/@base solid transparent;
+            border-bottom-color: #fff;
+            top: -11rem/@base;
+            left: -14rem/@base;
+
+        }
+
+        .title {
+            font-size: 20rem/@base;
+            height: 50rem/@base;
+            line-height: 50rem/@base;
+        }
+
+        .username {
+            em {
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+            }
+
+            i {
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+                padding-left: 15rem/@base;
+                color: #f59314;
+                font-size: 30rem/@base;
+            }
+        }
+
+        .content {
+            padding-top: 10rem/@base;
+            font-size: 22rem/@base;
+        }
+    }
+}

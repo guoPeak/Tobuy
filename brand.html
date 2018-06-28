@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>慢慢买-功能详情页</title>
+	<link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/brand.css">
+
+	<script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+	<!-- 头部标题logo区域 -->
+	<header class="mmb-header clearfix">
+		<a class="logo">
+			<img src="images/header_logo.png" alt="">
+		</a>
+		<a class="appdown">
+			<img src="images/header_app.png" alt="">
+		</a>
+	</header>
+
+	<!-- 搜索区 -->
+	<section class="mmb-search">
+		<input type="search" placeholder="请输入你想比价的商品">
+		<button>搜索</button>
+	</section>
+
+	<!-- 面包屑导航 -->
+	<section class="bread-crumbs">
+		<a href="index.html">首页</a>
+		<span>></span>
+		<a href="category.html">全部分类</a>
+		<span>></span>
+	</section>
+
+	<!-- 热门品牌排行 -->
+	<section class="brand-list">
+		<h2></h2>
+		<ul>
+			<!-- 挖个坑 -->
+		</ul>
+	</section>
+
+	<!-- 产品销量排行 -->
+	<section class="product-list">
+		<h2></h2>
+		<ul>
+			<!-- <li>
+				<a href="productDetail.html" >
+					<div class="img"><img src="images/product.jpg" alt=""></div>
+					<div class="content">
+						<h3 class="title txt-cut">乐视TV乐视TV乐视TV乐视TV乐视TV乐视TV乐视TV乐视TV乐视TV</h3>
+						<div class="price">¥199</div>
+						<div class="quote clearfix">
+							<span class="fl">报价(6)</span>
+							<span class="fr">评论(2234)</span>
+						</div>
+					</div>
+				</a>
+			</li> -->
+		</ul>
+	</section>
+
+	<!-- 平板电视最新评论 -->
+	<section class="brand-comments">
+		<h2></h2>
+		<ul>
+			<!-- 挖个坑 -->
+		</ul>
+	</section>
+
+	<!-- 底部 -->
+	<footer class="mmb-footer">
+		<div class="login">
+			<div>登录</div>
+			<div>注册</div>
+			<div class="to-top">
+				<a href="#">
+					<img src="images/top.jpg">回到顶部</a>
+			</div>
+		</div>
+
+		<div class="app">
+			<a href="javascript:;">手机APP下载</a>
+			<a href="javascript:;">慢慢买手机版</a>
+			<a href="javascript:;">--掌上比价平台</a>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</footer>
+
+	<!-- 品牌数据生成 -->
+	<script type="text/html" id="tpl1">
+		{{each result v i}}
+		<li>
+			<a href="javascript:;">
+				<div class="rank">{{i+1}}</div>
+				<div class="content">
+					<h3 class="title">{{v.brandName}}</h3>
+					<p class="info">{{v.brandInfo}}</p>
+				</div>
+				<div class="arrow">
+					<span class="fa fa-angle-right"></span>
+				</div>
+			</a>
+		</li>
+		{{/each}}
+	</script>
+
+	<!-- 产品销量排行 -->
+	<script type="text/html" id="tpl2">
+		{{each result v i}}
+		<li>
+			<a href="productDetail.html?productId={{v.productId}}" >
+				<div class="img">{{@ v.productImg}}</div>
+				<div class="content">
+					<h3 class="title txt-cut">{{v.productName}}</h3>
+					<div class="price clearfix">
+						<span class="fl">{{v.productPrice}}</span>
+						<span class="fr">★★★★★</span>
+					</div>
+					<div class="quote clearfix">
+						<span class="fl">{{v.productQuote}}</span>
+						<span class="fr">{{v.productCom}}</span>
+					</div>
+				</div>
+			</a>
+		</li>
+		{{/each}}
+	</script>
+
+	<script type="text/html" id="tpl3">
+		{{each result v i}}
+		<li>
+			<div class="product-info">
+				<div class="img"></div>
+				<div class="name"></div>
+			</div>
+			<div class="comments">
+				<div class="angle"></div>
+				<div class="title clearfix">
+					<span class="fl username"><em>{{v.comName}}</em>：<i>★★★★★</i></span>
+					<span class="fr">{{v.comTime}}</span>
+				</div>
+				<div class="content">
+					{{v.comContent}}
+				</div>
+			</div>
+		</li>
+		{{/each}}
+	</script>
+
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/artTemplate/template-web.js"></script>
+	<script src="js/common/Route.js"></script>
+	<script src="js/common/Tools.js"></script>
+	<script src="js/brand.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>慢慢买-商城导航</title>
+	<link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/brandTitle.css">
+
+	<script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+	<!-- 头部标题logo区域 -->
+	<header class="mmb-header clearfix">
+		<a class="logo">
+			<img src="images/header_logo.png" alt="">
+		</a>
+		<a class="appdown">
+			<img src="images/header_app.png" alt="">
+		</a>
+	</header>
+
+	<!-- 搜索区 -->
+	<section class="mmb-search">
+		<input type="search" placeholder="请输入你想比价的商品">
+		<button>搜索</button>
+	</section>
+
+	<!-- 面包屑导航 -->
+	<section class="bread-crumbs">
+		<a href="index.html">首页</a>
+		<span>></span>
+		<a href="category.html">全部分类</a>
+		<span>></span>
+	</section>
+
+	<!-- 热门品牌排行 -->
+	<section class="hot-brand">
+		<div>热门品牌排行</div>
+	</section>
+
+	<!-- 十大品牌分类 -->
+	<section class="brand-category">
+		<ul>
+			<!-- 按个坑 -->
+		</ul>
+	</section>
+
+	<!-- 底部 -->
+	<footer class="mmb-footer">
+		<div class="login">
+			<div>登录</div>
+			<div>注册</div>
+			<div class="to-top">
+				<a href="#">
+					<img src="images/top.jpg">回到顶部</a>
+			</div>
+		</div>
+
+		<div class="app">
+			<a href="javascript:;">手机APP下载</a>
+			<a href="javascript:;">慢慢买手机版</a>
+			<a href="javascript:;">--掌上比价平台</a>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</footer>
+
+	<!-- 品牌数据生成 -->
+	<script type="text/html" id="tpl">
+		{{each result v i}}
+		<li data-brand-title-id={{v.brandTitleId}}>
+			<h3 class="fl">{{v.brandTitle}}</h3>
+			<i class="fa fa-angle-down fr"></i>
+		</li>
+		{{/each}}
+	</script>
+
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/artTemplate/template-web.js"></script>
+	<script src="js/common/Route.js"></script>
+	<script src="js/common/Tools.js"></script>
+	<script src="js/brandTitle.js"></script>
+</body>
+
+</html>
