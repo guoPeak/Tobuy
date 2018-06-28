@@ -51,8 +51,9 @@
 	<script type="text/html" id="tpl">
 		{{each result v i}}
 		<h3 class="title">{{v.productName}}</h3>
+		<div class="price">{{v.productPinkage}}</div>
 		<div class="comform">{{v.productFrom}} | {{v.productTime}} {{v.productTips}}</div>
-		<div class="content">
+		<div class="product-desc">
 			<div class="wrapper">
 				<div class="small-img fr">{{@ v.productImgSm}}</div>
 				<div class="word">

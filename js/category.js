@@ -4,18 +4,19 @@ $(function () {
         // console.log(info);
         $('.category>ul').html(template('tpl1', info));
 
-        $('.category').on('click', ' .title', function () {
-            var that = this;
+        //渲染二级列表
+        $('.title').each(function () {
             var id = $(this).data('id');
-
+            var that = this;
             Route.getcategory(id, function (info) {
                 console.log(info);
                 $(that).next().html(template('tpl2', info));
-                $(that).next().stop().slideToggle();
-                $(that).parent().siblings().children('.content').slideUp();
             });
+        })
+    });
 
-        });
+    $('.category').on('click', ' .title', function () {
+        $(this).next().stop().slideToggle().parent().siblings().children('.content').stop().slideUp();
     });
 
 });

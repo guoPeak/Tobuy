@@ -357,6 +357,7 @@ i {
   font-size: 0.32rem;
 }
 .mmb-footer {
+  margin-top: 0.53333333rem;
   background-color: #f1f1f1;
 }
 .mmb-footer .login {
@@ -399,7 +400,7 @@ i {
   border-bottom: 1px solid #aaa;
 }
 .category .title h3 {
-  font-size: 0.34666667rem;
+  font-size: 0.37333333rem;
   font-weight: 700;
   line-height: 1.06666667rem;
 }

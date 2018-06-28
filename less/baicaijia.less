@@ -1,0 +1,151 @@
+@import 'varible';
+@import 'normalize';
+@import 'base';
+
+
+body {
+    background-color: #eee;
+}
+
+.bcj-nav {
+    width: 100%;
+    overflow: scroll;
+    background-color: #fff;
+    
+    ul {
+    
+        li {
+            float: left;
+            height: 80rem/@base;
+            line-height: 80rem/@base;
+            padding: 0 20rem/@base;
+            font-size: 24rem/@base;
+
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        li.now a {
+            border-bottom: 2px solid #d90000;
+        }
+    }
+}
+
+.product-list {
+    overflow: hidden;
+
+    li {
+        width: 100%;
+        padding: 20rem/@base 10rem/@base;
+        height: 300rem/@base;
+        margin: 10rem/@base 0;
+        background-color: #fff;
+    }
+
+    .img {
+        width: 260rem/@base;
+        height: 260rem/@base;
+        font-size: 16rem/@base;
+    }
+
+    .info {
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+        padding-left: 15rem/@base;
+
+        .title {
+            font-size: 30rem/@base;
+        }  
+    }
+
+    .pro-price {
+        position: absolute;
+        top: 95rem/@base;
+        font-size: 36rem/@base;
+        color: #fc061f;
+
+        i, em {
+            font-size: 26rem/@base;
+        }
+
+        em {
+            padding-left: 10rem/@base;
+        }
+
+        del {
+            font-size: 20rem/@base;
+            margin-left: 20rem/@base;
+            color: #aaa;
+        }
+    }
+
+    .progress {
+        position: absolute;
+        top: 150rem/@base;
+        font-size: 26rem/@base;
+
+        i {
+            display: inline-block;
+            vertical-align: middle;
+            width: 170rem/@base;
+            height: 30rem/@base;
+            border: 2px solid #fc373b;
+            border-radius: 30rem/@base;
+            margin-right: 15rem/@base;
+            background-color: #ffb7b7;
+            position: relative;
+
+            span {
+                position: absolute;
+                top: 0;
+                right: 10px;
+            }
+        }
+
+        em {
+            display: block;
+            height: 100%;
+            background-color: #d90000;
+            border-radius: 30rem/@base;
+        }
+
+        b {
+            font-weight: 400;
+            color: #fc373b;
+            font-size: 22rem/@base;
+        }
+
+        
+    }
+
+    .voucher a {
+        width: 220rem/@base;
+        height: 52rem/@base;
+        color: #e3769f;
+        border: 1px dashed #e3769f;
+        position: absolute;
+        top: 205rem/@base;
+        font-size: 22rem/@base;
+        line-height: 52rem/@base;
+        text-align: center;
+    }
+
+    .order a {
+        position: absolute;
+        width: 115rem/@base;
+        height: 55rem/@base;
+        line-height: 55rem/@base;
+        text-align: center;
+        font-size: 22rem/@base;
+        color: #fff;
+        right: 20rem/@base;
+        bottom: 0;
+        background-color: #ff5e5d;
+        border-radius: 10rem/@base;
+    }
+
+}

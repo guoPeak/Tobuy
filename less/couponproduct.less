@@ -1,0 +1,93 @@
+@import 'varible';
+@import 'normalize';
+@import 'base';
+
+.mmb-header {
+    background-color: #f4483e;
+}
+
+.product-list {
+
+    .tips {
+        text-align: center;
+        line-height: 50rem/@base;
+        font-size: 18rem/@base;
+        color: #999;
+    }
+
+    ul li {
+        padding: 10rem/@base 10rem/@base 20rem/@base;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .img {
+        float: left;
+        width: 200rem/@base;
+        min-height: 50rem/@base; //占位置
+    }
+
+    .content {
+        overflow: hidden;
+        padding: 0 20rem/@base;
+
+        .title {
+            font-size: 26rem/@base;
+        }
+
+        .price {
+            padding-top: 15rem/@base;
+            font-size: 28rem/@base;
+            font-weight: 700;
+        }
+
+        .time {
+            padding-top: 30rem/@base;
+            font-size: 22rem/@base;
+            color: #ee7a2c;
+        }
+    }
+}
+
+.mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.6);
+    display: none;
+
+    .wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400rem/@base;
+        height: 300rem/@base;
+        overflow: hidden;
+    }
+
+    ul {
+        width: 1200rem/@base;
+        transition: all 1s;
+        position: absolute;
+        top: 0;
+        left: -400rem/@base;
+        z-index: 99;
+    }
+
+    li  {
+        float: left;  
+        width: 400rem/@base;
+        height: 300rem/@base;
+    }
+
+    .arrow {
+        position: absolute;
+        width: 600rem/@base;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 70rem/@base;
+    }
+}

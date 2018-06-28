@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>慢慢买-白菜价</title>
+	<link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/baicaijia.css">
+
+	<script src="lib/flexible/flexible.js"></script>
+</head>
+
+<body>
+	<!-- 头部标题logo区域 -->
+	<header class="mmb-header clearfix">
+		<a href="javascript:history.go(-1);" class="back">
+			<span class="fa fa-angle-left"></span>
+		</a>
+		<h3>白菜价-淘宝内部券</h3>
+		<a class="appdown">
+			<img src="images/header_app.png" alt="">
+		</a>
+	</header>
+
+	<nav class="bcj-nav">
+		<ul class="clearfix">
+			<!-- 挖个坑 -->
+		</ul>
+	</nav>
+
+	<div class="product-list">
+		<ul>
+			<!-- <li>
+				<a href="#">
+					<div class="img fl">
+						<img src="images/product.jpg" alt="">
+					</div>
+					<div class="info">
+						<div class="title txt-cut">商品名字商品名字商品名字商品名字商品名字商品名字商品名字商品名字</div>
+						<div class="pro-price">
+							券后&yen;
+							<span class="price"> 199</span>
+							<span class="oldprice">&yen;299</span>
+						</div>
+						<div class="progress">
+							<span>
+								<i>75%</i>
+							</span>
+							已领75117张
+						</div>
+						<div class="voucher">点此领取10元优惠券</div>
+						<div class="order">
+							<a href="#">下单链接</a>
+						</div>
+					</div>
+				</a>
+			</li>
+			 -->
+		</ul>
+	</div>
+
+	<!-- 底部 -->
+	<footer class="mmb-footer">
+		<div class="login">
+			<div>登录</div>
+			<div>注册</div>
+			<div class="to-top">
+				<a href="#">
+					<img src="images/top.jpg">回到顶部</a>
+			</div>
+		</div>
+
+		<div class="app">
+			<a href="javascript:;">手机APP下载</a>
+			<a href="javascript:;">慢慢买手机版</a>
+			<a href="javascript:;">--掌上比价平台</a>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</footer>
+
+
+	<script type="text/html" id="tpl1">
+		{{each result v i}}
+		<li class="{{i==0?'now':''}}" data-titleid="{{v.titleId}}">
+			<a href="javascript:;">{{v.title}}</a>
+		</li>
+		{{/each}}
+	</script>
+
+	<script type="text/html" id="tpl2">
+		{{each result v i}}
+		<li>
+			<a href="javascript:;">
+				<div class="img fl">
+					{{@ v.productImg}}
+				</div>
+				<div class="info">
+					<div class="title txt-cut">{{@ v.productName}}</div>
+					<div class="pro-price">
+						{{@ v.productPrice}}
+					</div>
+					<div class="progress">
+						{{@ v.productCouponRemain}}
+					</div>
+					<div class="voucher">
+						{{@ v.productCoupon}}
+					</div>
+					<div class="order">
+						{{@ v.productHref}}
+					</div>
+				</div>
+			</a>
+		</li>
+		{{/each}}
+	</script>
+
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/artTemplate/template-web.js"></script>
+	<script src="lib/Iscroll/iscroll.js"></script>
+	<script src="js/common/Route.js"></script>
+	<script src="js/common/Tools.js"></script>
+	<script src="js/baicaijia.js"></script>
+</body>
+
+</html>

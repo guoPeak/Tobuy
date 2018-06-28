@@ -392,86 +392,124 @@ i {
 .mmb-footer .app a:nth-child(1) {
   color: #ff0000;
 }
-.bread-crumbs {
+body {
+  background-color: #eee;
+}
+.bcj-nav {
   width: 100%;
-  height: 1rem;
-  border-bottom: 1px solid #ccc;
-  line-height: 1rem;
+  overflow: scroll;
+  background-color: #fff;
+}
+.bcj-nav ul li {
+  float: left;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
   padding: 0 0.26666667rem;
-  font-size: 0.29333333rem;
-  background-image: linear-gradient(#ffffff, rgba(0, 0, 0, 0.3));
+  font-size: 0.32rem;
 }
-.bread-crumbs button {
-  width: 1.62666667rem;
-  height: 0.77333333rem;
-  line-height: 0.77333333rem;
-  vertical-align: middle;
-  border-radius: 0.2rem;
-  background-color: #ccc;
-}
-.product-list li {
-  width: 100%;
-  height: 3.13333333rem;
-  border-bottom: 1px solid #ccc;
-}
-.product-list li a {
+.bcj-nav ul li a {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 0.4rem;
 }
-.product-list li .img {
-  float: left;
-  width: 2.66666667rem;
-  height: 2.66666667rem;
-  margin-right: 0.26666667rem;
+.bcj-nav ul li.now a {
+  border-bottom: 2px solid #d90000;
+}
+.product-list {
+  overflow: hidden;
+}
+.product-list li {
+  width: 100%;
+  padding: 0.26666667rem 0.13333333rem;
+  height: 4rem;
+  margin: 0.13333333rem 0;
+  background-color: #fff;
+}
+.product-list .img {
+  width: 3.46666667rem;
+  height: 3.46666667rem;
   font-size: 0.21333333rem;
 }
-.product-list li .img img {
-  width: 100%;
-  height: 100%;
-}
-.product-list li .info {
+.product-list .info {
   overflow: hidden;
   position: relative;
   height: 100%;
+  padding-left: 0.2rem;
 }
-.product-list li .info .title {
+.product-list .info .title {
+  font-size: 0.4rem;
+}
+.product-list .pro-price {
   position: absolute;
-  top: 0;
-  font-size: 0.37333333rem;
+  top: 1.26666667rem;
+  font-size: 0.48rem;
+  color: #fc061f;
 }
-.product-list li .info .price {
-  color: #ff6c00;
+.product-list .pro-price i,
+.product-list .pro-price em {
   font-size: 0.34666667rem;
-  position: absolute;
-  top: 1.33333333rem;
 }
-.product-list li .info .comment {
-  width: 2.8rem;
-  color: #bbbbbb;
-  font-size: 0.29333333rem;
-  line-height: 1;
+.product-list .pro-price em {
+  padding-left: 0.13333333rem;
+}
+.product-list .pro-price del {
+  font-size: 0.26666667rem;
+  margin-left: 0.26666667rem;
+  color: #aaa;
+}
+.product-list .progress {
   position: absolute;
   top: 2rem;
+  font-size: 0.34666667rem;
 }
-.product-list .paginator {
-  width: 100%;
-  height: 1.26666667rem;
-  padding-top: 0.26666667rem;
-  text-align: center;
-  font-size: 0.24rem;
+.product-list .progress i {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.26666667rem;
+  height: 0.4rem;
+  border: 2px solid #fc373b;
+  border-radius: 0.4rem;
+  margin-right: 0.2rem;
+  background-color: #ffb7b7;
+  position: relative;
 }
-.product-list .paginator button {
-  width: 2.17333333rem;
-  height: 0.86666667rem;
-  background-color: #ddd;
-  border-radius: 0.13333333rem;
+.product-list .progress i span {
+  position: absolute;
+  top: 0;
+  right: 10px;
 }
-.product-list .paginator select {
-  width: 2.05333333rem;
-  height: 0.93333333rem;
-  margin: 0 1.2rem;
-  padding-left: 0.4rem;
+.product-list .progress em {
+  display: block;
+  height: 100%;
+  background-color: #d90000;
+  border-radius: 0.4rem;
+}
+.product-list .progress b {
+  font-weight: 400;
+  color: #fc373b;
   font-size: 0.29333333rem;
+}
+.product-list .voucher a {
+  width: 2.93333333rem;
+  height: 0.69333333rem;
+  color: #e3769f;
+  border: 1px dashed #e3769f;
+  position: absolute;
+  top: 2.73333333rem;
+  font-size: 0.29333333rem;
+  line-height: 0.69333333rem;
+  text-align: center;
+}
+.product-list .order a {
+  position: absolute;
+  width: 1.53333333rem;
+  height: 0.73333333rem;
+  line-height: 0.73333333rem;
+  text-align: center;
+  font-size: 0.29333333rem;
+  color: #fff;
+  right: 0.26666667rem;
+  bottom: 0;
+  background-color: #ff5e5d;
+  border-radius: 0.13333333rem;
 }

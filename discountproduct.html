@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>慢慢买-国内折扣</title>
 	<link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/inlanddiscount.css">
+	<link rel="stylesheet" href="css/discountproduct.css">
 
 	<script src="lib/flexible/flexible.js"></script>
 </head>
@@ -24,11 +24,9 @@
 		</a>
 	</header>
 
-	<div class="mmb-product">
-		<ul class="clearfix">
-			<!-- 数据生成 -->
-		</ul>
-	</div>
+	<section class="mmb-discountdetail">
+
+	</section>
 
 
 	<!-- 底部 -->
@@ -52,16 +50,23 @@
 
 	<script type="text/html" id="tpl">
 		{{each result v i}}
-		<li>
-			<a href="discountproduct.html?productId={{v.productId}}">
-				<div class="img">
-					{{@ v.productImg}}
+		<h3 class="title">{{v.productName}}</h3>
+		<div class="price">{{v.productPrice}}</div>
+		<div class="comform">{{v.productFrom}} | {{v.productTime}} {{v.productTips}}</div>
+		<div class="content">
+			<div class="wrapper">
+				<div class="small-img fr">{{@ v.productImg}}</div>
+				<div class="word">
+					<p>{{v.productInfo}}</p>
 				</div>
-				<h3 class="product-name txt-cut">{{v.productName}}</h3>
-				<div class="price one-txt-cut">{{v.productPrice}}</div>
-				<div class="comfrom">{{v.productFrom}} | {{v.productTime}}</div>
-			</a>
-		</li>
+			</div>
+			<div class="big-img">{{@ v.productImg}}</div>
+		</div>
+		<div class="to-buy"><a href="#">前往购买</a></div>
+		<div class="mmb-weixing">
+			<img src="images/mmbweixin2.png" alt="">
+		</div>
+		{{@ v.productComment}}
 		{{/each}}
 	</script>
 
@@ -69,7 +74,7 @@
 	<script src="lib/artTemplate/template-web.js"></script>
 	<script src="js/common/Route.js"></script>
 	<script src="js/common/Tools.js"></script>
-	<script src="js/inlanddiscount.js"></script>
+	<script src="js/discountproduct.js"></script>
 </body>
 
 </html>

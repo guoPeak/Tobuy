@@ -357,6 +357,7 @@ i {
   font-size: 0.32rem;
 }
 .mmb-footer {
+  margin-top: 0.53333333rem;
   background-color: #f1f1f1;
 }
 .mmb-footer .login {
@@ -395,8 +396,12 @@ i {
   padding: 0 0.26666667rem;
 }
 .mmb-discountdetail .title {
-  padding: 0.4rem 0;
+  padding: 0.4rem 0 0.13333333rem;
   font-size: 0.46666667rem;
+}
+.mmb-discountdetail .price {
+  color: #ff9000;
+  margin-bottom: 0.33333333rem;
 }
 .mmb-discountdetail .comform {
   font-size: 0.26666667rem;
@@ -415,9 +420,12 @@ i {
 }
 .mmb-discountdetail .small-img {
   width: 3.33333333rem;
+  font-size: 0.21333333rem;
+  min-height: 2rem;
 }
 .mmb-discountdetail .big-img {
   padding: 0.53333333rem 0.8rem;
+  font-size: 0.21333333rem;
 }
 .mmb-discountdetail .product-city ul {
   width: 3.73333333rem;
@@ -459,23 +467,23 @@ i {
 .mmb-weixing {
   margin-top: 0.8rem;
 }
-.cu-content-pl .tit {
+.tit {
   height: 1.2rem;
   line-height: 1.2rem;
   font-size: 0.4rem;
   font-weight: 700;
 }
-.cu-content-pl .reply {
+.reply {
   position: relative;
 }
-.cu-content-pl .reply textarea {
+.reply textarea {
   width: 100%;
   height: 2.93333333rem;
   border: 1px solid #ccc;
   font-size: 0.32rem;
   vertical-align: middle;
 }
-.cu-content-pl .reply input {
+.reply input {
   position: absolute;
   width: 2.66666667rem;
   height: 1.01333333rem;
@@ -485,46 +493,46 @@ i {
   color: #fff;
   font-size: 0.42666667rem;
 }
-.cu-content-pl .list {
+.list {
   padding: 0.26666667rem 0;
   margin-bottom: 0.4rem;
 }
-.cu-content-pl .list li {
+.list li {
   padding: 0.26666667rem 0;
   border-bottom: 1px solid #ccc;
 }
-.cu-content-pl .list .userimg {
+.list .userimg {
   float: left;
 }
-.cu-content-pl .list .userimg img {
+.list .userimg img {
   width: 1.06666667rem;
   height: 1.06666667rem;
   border-radius: 50%;
   margin-right: 0.4rem;
 }
-.cu-content-pl .list .con {
+.list .con {
   overflow: hidden;
 }
-.cu-content-pl .list .name {
+.list .name {
   height: 0.46666667rem;
   line-height: 0.46666667rem;
 }
-.cu-content-pl .list .username {
+.list .username {
   float: left;
   font-size: 0.29333333rem;
   color: #4290c0;
 }
-.cu-content-pl .list .time {
+.list .time {
   float: right;
   color: #999;
   font-size: 0.26666667rem;
 }
-.cu-content-pl .list .content {
+.list .content {
   margin-top: 0.2rem;
   font-size: 0.32rem;
   color: #555;
 }
-.cu-content-pl .list .content img {
+.list .content img {
   display: inline-block;
   width: auto;
   vertical-align: middle;

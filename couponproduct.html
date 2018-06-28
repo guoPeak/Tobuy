@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>慢慢买-国内折扣</title>
+	<title>慢慢买-优惠券</title>
 	<link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/inlanddiscount.css">
+	<link rel="stylesheet" href="css/couponproduct.css">
 
 	<script src="lib/flexible/flexible.js"></script>
 </head>
@@ -18,18 +18,18 @@
 		<a href="javascript:history.go(-1);" class="back">
 			<span class="fa fa-angle-left"></span>
 		</a>
-		<h3>国内折扣</h3>
+		<h3></h3>
 		<a class="appdown">
 			<img src="images/header_app.png" alt="">
 		</a>
 	</header>
 
-	<div class="mmb-product">
-		<ul class="clearfix">
-			<!-- 数据生成 -->
+	<div class="product-list">
+		<div class="tips">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+		<ul>
+			
 		</ul>
 	</div>
-
 
 	<!-- 底部 -->
 	<footer class="mmb-footer">
@@ -50,26 +50,43 @@
 		</div>
 	</footer>
 
+	<!-- 轮播图遮罩层 -->
+	<div class="mask">
+		<div class="wrapper">
+				<ul>
+					<li class="prev"><img src="images/productctrl.jpg" alt=""></li>
+					<li class="current"><img src="images/product.jpg" alt=""></li>
+					<li class="next"><img src="images/productctrl.jpg" alt=""></li>
+				</ul>
+		</div>
+		<div class="arrow">
+				<div class="arr-l fl"><span class="fa fa-chevron-left"></span></div>
+				<div class="arr-r fr"><span class="fa fa-chevron-right"></span></div>
+		</div>
+	</div>
+
 	<script type="text/html" id="tpl">
 		{{each result v i}}
 		<li>
-			<a href="discountproduct.html?productId={{v.productId}}">
-				<div class="img">
-					{{@ v.productImg}}
-				</div>
-				<h3 class="product-name txt-cut">{{v.productName}}</h3>
-				<div class="price one-txt-cut">{{v.productPrice}}</div>
-				<div class="comfrom">{{v.productFrom}} | {{v.productTime}}</div>
-			</a>
-		</li>
-		{{/each}}
+				<a href="javascript:;" class="clearfix">
+					<div class="img" data-couponproduct-id={{v.couponProductId}}>
+						{{@ v.couponProductImg}}
+					</div>
+					<div class="content">
+						<h3 class="title">{{v.couponProductName}}</h3>
+						<div class="price">{{v.couponProductPrice}}</div>
+						<div class="time">{{v.couponProductTime}}</div>
+					</div>
+				</a>
+			</li>
+			{{/each}}
 	</script>
 
 	<script src="lib/jquery/jquery.min.js"></script>
 	<script src="lib/artTemplate/template-web.js"></script>
 	<script src="js/common/Route.js"></script>
 	<script src="js/common/Tools.js"></script>
-	<script src="js/inlanddiscount.js"></script>
+	<script src="js/couponproduct.js"></script>
 </body>
 
 </html>

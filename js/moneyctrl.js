@@ -1,4 +1,4 @@
-$(function () {  
+$(function () {
 
 
     //渲染第一页 数据获取是第0页
@@ -32,7 +32,7 @@ $(function () {
     })
 
     function rendedProductList(page) {
-        Route.getmoneyctrl( page, function (info) {
+        Route.getmoneyctrl(page, function (info) {
             console.log(info);
             $('.product-list ul').html(template('tpl', info));
             var totalpage = Math.ceil(info.totalCount / info.pagesize);
@@ -43,6 +43,13 @@ $(function () {
             }
             $('#currentPage').html(pageHtml);
             $('#currentPage').val(page + 1);
+
+            //改变图片的src
+            $('.img img').each(function (i, e) {
+                var src = $(e).attr('src').split('=');
+                src = src[src.length - 1];
+                $(e).attr('src', src);
+            });
         })
     }
 
