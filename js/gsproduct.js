@@ -1,6 +1,5 @@
 $(function () {  
 
-    var $search = $('.mmb-comfrom .search');
 
     Route.getgsshop(function (info) {  
         // console.log(info);

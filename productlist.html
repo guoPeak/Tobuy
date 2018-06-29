@@ -15,7 +15,7 @@
 <body>
 	<!-- 头部标题logo区域 -->
 	<header class="mmb-header clearfix">
-		<a class="logo">
+		<a href="index.html" class="logo">
 			<img src="images/header_logo.png" alt="">
 		</a>
 		<a class="appdown">
@@ -85,7 +85,7 @@
 	<script type="text/html" id="tpl2">
 		{{each result v i}}
 			<li>
-				<a href="productDetail.html?productId={{v.productId}}">
+				<a href="productDetail.html?productId={{v.productId}}&categoryId={{v.categoryId}}">
 					<div class="img">
 						{{@ v.productImg}}
 					</div>

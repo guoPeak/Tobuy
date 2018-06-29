@@ -446,11 +446,10 @@ i {
   overflow: hidden;
 }
 .mask ul {
-  width: 16rem;
   transition: all 1s;
   position: absolute;
   top: 0;
-  left: -5.33333333rem;
+  left: 0;
   z-index: 99;
 }
 .mask li {

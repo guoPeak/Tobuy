@@ -390,7 +390,7 @@ i {
   font-size: 0.21333333rem;
 }
 .mmb-footer .app a:nth-child(1) {
-  color: #ff0000;
+  color: red;
 }
 body {
   background-color: #eee;
@@ -407,9 +407,18 @@ body {
   line-height: 1rem;
   text-align: center;
 }
+.mmb-comfrom li:nth-child(1) {
+  width: 25%;
+}
+.mmb-comfrom li:nth-child(2) {
+  width: 50%;
+}
+.mmb-comfrom li:nth-child(3) {
+  width: 25%;
+}
 .mmb-comfrom li {
   float: left;
-  padding: 0 0.4rem;
+  padding: 0 0.26666667rem;
   height: 100%;
   font-size: 0.32rem;
   overflow: hidden;

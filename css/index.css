@@ -444,6 +444,8 @@ i {
 }
 .recommend-item .info {
   overflow: hidden;
+  position: relative;
+  height: 100%;
 }
 .recommend-item .info .title {
   font-size: 0.37333333rem;
@@ -455,8 +457,11 @@ i {
 }
 .recommend-item .info .comment {
   color: #bbbbbb;
-  margin-top: 0.93333333rem;
-  font-size: 0.26666667rem;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0.13333333rem;
+  font-size: 0.29333333rem;
   line-height: 1;
 }
 .mmb-more {

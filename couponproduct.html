@@ -54,9 +54,7 @@
 	<div class="mask">
 		<div class="wrapper">
 				<ul>
-					<li class="prev"><img src="images/productctrl.jpg" alt=""></li>
-					<li class="current"><img src="images/product.jpg" alt=""></li>
-					<li class="next"><img src="images/productctrl.jpg" alt=""></li>
+					
 				</ul>
 		</div>
 		<div class="arrow">
@@ -80,6 +78,15 @@
 				</a>
 			</li>
 			{{/each}}
+	</script>
+
+	<!-- 轮播图图片生成 -->
+	<script type="text/html" id="tpl2">
+		<li>{{@ imgArr[imgArr.length - 1]}}</li>
+		{{each imgArr v i}}
+		<li>{{@ v}}</li>
+		{{/each}}
+		<li>{{@ imgArr[0]}}</li>
 	</script>
 
 	<script src="lib/jquery/jquery.min.js"></script>

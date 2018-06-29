@@ -9,6 +9,10 @@ $(function () {
         //截取地址
         var src = $('.product-desc img').each(function (i, e) {
             var src = $(e).attr('src').split('=http');
+            if (src.indexOf('=http') == -1) {
+                return;
+            }
+            src = src.split('=http');
             src = 'http' + src[src.length - 1];
             $(e).attr('src', src);
         })

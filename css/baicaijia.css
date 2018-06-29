@@ -414,6 +414,7 @@ body {
 }
 .bcj-nav ul li.now a {
   border-bottom: 2px solid #d90000;
+  color: red;
 }
 .product-list {
   overflow: hidden;
@@ -471,6 +472,7 @@ body {
   border-radius: 0.4rem;
   margin-right: 0.2rem;
   background-color: #ffb7b7;
+  overflow: hidden;
   position: relative;
 }
 .product-list .progress i span {

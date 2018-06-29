@@ -16,7 +16,7 @@ $(function () {
         $('.brand-list ul').html(template('tpl1', info));
     })
 
-    Route.getbrandproductlist(brandTitleId, 4, function (info) {  
+    Route.getbrandproductlist(brandTitleId, 8, function (info) {  
         console.log(info);
         $('.product-list ul').html(template('tpl2', info));
         firstImg = info.result[0].productImg;
