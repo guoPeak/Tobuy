@@ -1,4 +1,4 @@
  //回到顶部
  $('.to-top').on('click', function () {  
-    $(document).scrollTop(0);
+    $('html').animate({"scrollTop": 0}, 1000);
 })

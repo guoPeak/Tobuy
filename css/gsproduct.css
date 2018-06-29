@@ -337,7 +337,8 @@ i {
   position: relative;
 }
 .mmb-search input {
-  width: 100%;
+  float: left;
+  width: 76%;
   height: 100%;
   border-radius: 70px;
   background-color: #eee;
@@ -346,11 +347,9 @@ i {
   box-sizing: border-box;
 }
 .mmb-search button {
-  position: absolute;
-  width: 1.69333333rem;
-  height: 0.82666667rem;
-  top: 0.26666667rem;
-  right: 0.26666667rem;
+  width: 20%;
+  height: 100%;
+  float: right;
   border-radius: 0.42666667rem;
   background-color: #ff841d;
   color: #fff;
@@ -390,7 +389,7 @@ i {
   font-size: 0.21333333rem;
 }
 .mmb-footer .app a:nth-child(1) {
-  color: red;
+  color: #ff0000;
 }
 body {
   background-color: #eee;
